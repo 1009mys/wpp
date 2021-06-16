@@ -1,0 +1,45 @@
+.tm-header {
+    background-color: #0CC;
+    color: white;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 300px;
+    overflow-y: visible;     
+}
+
+.main_content
+{
+    position: absolute;
+    left: 320px
+}
+
+
+#links_explanation
+{
+    color: red;
+}
+
+.light
+{
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.main_content
+{
+    border: 5px solid blue;
+}
+
+#houseInfo
+{
+    border: 2px dotted red;
+}
+
+.myDiv
+{
+    border: 1px solid black;
+}

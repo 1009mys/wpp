@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나에게 알맞는 집찾기</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/sys.js">
+    </script>
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div>
+            <div>         
+                <h2>나에게 알맞는 집찾기</h2>
+            </div>
+            <nav>            
+                <ul>
+                    <li>
+                        <a href="home.html">
+                            홈
+                        </a>
+                    </li>
+                    <li>
+                        <a href="popular.html">
+                            인기있는 집
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            나에게 알맞는 집찾기
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            나의 집 올리기
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main_content">
+        <div id="houseInfo">
+    
+        </div>
+        <script >
+            sortByPopularity();
+            var info = document.getElementById("houseInfo")
+            
+            if(houses[0][1] != 0)
+            {
+                info.innerHTML = "<h2>인기있는 상위 10%매물들!</h2>"
+                for(var i=0;i<houses.length/10;i++)
+                {
+                    printInfo(i)
+                }
+            }
+            else
+            {
+                info.innerHTML = "<h2>인기 매물이 없습니다.</h2>"
+            }
+            
+        </script>
+    
+        
+    </div>
+</body>
+</html>

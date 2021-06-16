@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나에게 알맞는 집찾기</title>
+
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/sys.js"></script>
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div>
+            <div>         
+                <h2>나에게 알맞는 집찾기</h2>
+            </div>
+            <nav>            
+                <ul>
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="search.html">나에게 알맞는 집찾기</a></li>
+                    <li><a href="contact.html">사이트 설명란</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main_content">
+        <details>
+            <summary>매물 직접 올리기</summary>
+            <select name="건물 이름" class="houseNameForNewHouse">
+                <option value="행복아파트">행복아파트</option>
+                <option value="좋아아파트">좋아아파트</option>
+                <option value="신혼아파트">신혼아파트</option>
+                <option value="편리아파트">편리아파트</option>
+                <option value="청년빌라">청년빌라</option>
+                <option value="혼자산다빌라">혼자산다빌라</option>
+                <option value="넓어원룸">넓어원룸</option>
+            </select>
+            &nbsp;
+            <select name="주거 형태" class="houseTypeForNewHouse">
+                <option value="매매" selected>매매</option>
+                <option value="전세">전세</option>
+                <option value="월세">월세</option>
+            </select>
+            &nbsp;
+            <input type="button" onclick="newHouse()" value="상세정보 입력하기">
+            <br>
+            <div id="newHouseInfo"></div>
+        </details>
+
+        <h2>원하는 옵션을 선택하여 검색해주세요.</h2>
+        <input class="houseType" type="checkbox" name="매매" value="trading">매매
+        <input class="houseType" type="checkbox" name="전세" value="jeonse">전세
+        <input class="houseType" type="checkbox" name="월세" value="monthly">월세
+        <br>
+
+        크기 
+        <input class="houseSize" type="number" name="최소크기" step="0.1" min="0" value="0">평 ~ 
+        <input class="houseSize" type="number" name="최대크기" step="0.1" min="0" value="0">평 
+        <br>
+
+        가격대(매매,전세) 
+        <input class="housePrice" type="number" name="최소가격" step="0.1" min="0" value="0">억 ~ 
+        <input class="housePrice" type="number" name="최대가격" step="0.1" min="0" value="0">억
+        <br>
+
+        가격대(월세)
+        <br>
+        보증금: 
+        <input class="deposit" type="number" name="최소가격" step="10" min="0" value="0">만 ~  
+        <input class="deposit" type="number" name="최대가격" step="10" min="0" value="0">만
+        <br>
+        월세: 
+        <input class="monthly" type="number" name="최소가격" step="1" min="0" value="0">만 ~  
+        <input class="monthly" type="number" name="최대가격" step="1" min="0" value="0">만
+        <br>
+        
+
+        보기설정:
+        <input class="printType" type="radio" name="printType" checked><label>가격 오름차순</label>
+        <input class="printType" type="radio" name="printType"><label>가격 내림차순</label>
+        <input class="printType" type="radio" name="printType"><label>크기 오름차순</label>
+        <input class="printType" type="radio" name="printType"><label>크기 내림차순</label>
+        <input class="printType" type="radio" name="printType"><label>인기순</label>
+
+        <br>
+
+        <input type="button" value="검색" onclick="btn_click()">
+
+        <div id="houseInfo">
+
+        </div>
+    </div>
+    
+</body>
+</html>
